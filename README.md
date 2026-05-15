@@ -44,7 +44,7 @@
 * **ジオイド・モデルの刷新:** 新しい「ジオイド2024」が導入されました。これにより、人工衛星で測った高さ（楕円体高）から、より正確に「標高」を計算できるようになりました。
 * **水平座標は維持:** 日本測地系2011（JGD2011）の水平位置は引き継がれるため、緯度・経度自体に大きな変更はありません。
 
-<img src="https://computational-sediment-hyd.github.io/JGD2024OnRiverManagement/fig/fig_gsiHP.png" width="40%">
+<img src="https://computational-sediment-hyd.github.io/JGD2024OnRiverManagement/fig/fig_gsiHP.png" width="60%">
 
 水準点改定量のコンター図（測地成果2024移行のための水準点標高補正パラメータ）コンター間隔：5cm (出典：[国土地理院webサイト](https://www.gsi.go.jp/sokuchikijun/hyoko2024rev.html))
 
@@ -120,7 +120,7 @@ frameborder="0" width="630" height="315" style="transform:scale(0.93); transform
 ```
  - GIS等とx, yが逆になることに注意。
  - 標高(m)より右のデータは無くてもO.K.
- - データ数は最大30000万点まで
+ - データ数は最大30000点まで
 
 参考として、サンプルデータから入力ファイルを作成するためのPythonスクリプトは以下のとおり
 
@@ -145,7 +145,7 @@ with open('xy_h.in', 'w', encoding='utf-8') as f:
 [水準点標高補正用 Ver.1.0.1](https://vldb.gsi.go.jp/sokuchi/surveycalc/patchjgd_BMh2024/index.html) にアクセスし、下のとおりに実行すると補正量を示した[xy_h.out](https://computational-sediment-hyd.github.io/JGD2024OnRiverManagement/xy_h.out)が作成される。
 
 
-<img src="https://computational-sediment-hyd.github.io/JGD2024OnRiverManagement/fig/sample01.png" width="50%">
+<img src="https://computational-sediment-hyd.github.io/JGD2024OnRiverManagement/fig/sample01.png" width="80%">
 
 #### ソフトウェアPatchJGD_HVによる変換
 
@@ -186,7 +186,7 @@ with open('input.txt', 'w', encoding='shift-JIS') as f:
 
 ソフトウェアで下のとおりに入力し、「補正結果出力」をクリックすると、出力ファイル[.out](https://computational-sediment-hyd.github.io/JGD2024OnRiverManagement/out.out)が作成される。また、画面上に補正量が図化される。
 
-<img src="https://computational-sediment-hyd.github.io/JGD2024OnRiverManagement/fig/sample012.png" width="50%">
+<img src="https://computational-sediment-hyd.github.io/JGD2024OnRiverManagement/fig/sample012.png" width="80%">
 
 参考：高速化のテクニック
 
@@ -194,7 +194,7 @@ with open('input.txt', 'w', encoding='shift-JIS') as f:
 
 以下のとおり、画面表示をオフにすると若干早くなります。
 
-<img src="https://computational-sediment-hyd.github.io/JGD2024OnRiverManagement/fig/speedup.png" width="50%">
+<img src="https://computational-sediment-hyd.github.io/JGD2024OnRiverManagement/fig/speedup.png" width="80%">
 
 出典：ジオ・コーチ・システムズwebサイト https://geocoach.co.jp/help/DMPatchJgdTransform0Dialog.pdf
 
